@@ -1,0 +1,35 @@
+{% load staticfiles %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django blog</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+     <link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="page-wrap">
+        <header class="main">
+            <div class="container">
+                <h1><a href="/">Django Blog</a></h1>
+            </div>
+        </header>
+        <div class="container">
+                {% block content %}
+                {% endblock %}
+            
+        </div>
+
+            
+    </div> 
+    <footer class="site-footer">
+        <div class="container">    
+             2016 &copy; Sergey Bazarov
+        </div>        
+    </footer>
+      
+</body>
+</html>
